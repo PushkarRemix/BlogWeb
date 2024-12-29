@@ -16,6 +16,11 @@ const featuredPost = {
 ---
 
 <Layout title="Top 10 Rankings - Your Ultimate Guide to the Best of Everything">
+  <!-- Google AdSense Script -->
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2870239774237701" crossorigin="anonymous"></script>
+  </head>
+
   <div class="bg-gradient-to-b from-primary-50 to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="text-center mb-12">
@@ -25,20 +30,37 @@ const featuredPost = {
         <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
           Expert-curated rankings and reviews to help you make informed decisions.
         </p>
+        
+        <!-- Example: Affiliate Banner or Ad Unit above the title -->
+        <div class="mb-6">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-2870239774237701"
+               data-ad-slot="xxxxxx"   <!-- Replace with your actual AdSlot ID -->
+               data-ad-format="auto"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
         <SearchBar />
       </div>
     </div>
   </div>
 
   <main>
+    <!-- Featured Post Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <FeaturedPost post={featuredPost} />
     </div>
 
+    <!-- Category Section -->
     <CategorySection title="Explore Categories" />
     
+    <!-- Trending Section -->
     <TrendingSection />
 
+    <!-- Subscription Section (Optional monetization) -->
     <section class="py-12 bg-primary-50 dark:bg-gray-800 transition-colors duration-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
@@ -46,6 +68,8 @@ const featuredPost = {
           <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
             Subscribe to our newsletter and get the latest rankings, reviews, and exclusive content delivered straight to your inbox.
           </p>
+          
+          <!-- Subscription Form -->
           <form class="max-w-md mx-auto">
             <div class="flex">
               <input
@@ -65,4 +89,24 @@ const featuredPost = {
       </div>
     </section>
   </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="text-center">
+      <p>&copy; 2024 Top10 Rankings. All rights reserved.</p>
+
+      <!-- Example: AdSense Ad Unit in Footer -->
+      <div class="mt-4">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2870239774237701"
+             data-ad-slot="yyyyyy"  <!-- Replace with your actual AdSlot ID -->
+             data-ad-format="auto"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+  </footer>
+
 </Layout>
